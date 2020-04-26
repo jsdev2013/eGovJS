@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="DevCom">
+
+	<typeAlias  alias="egovMap"  type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="DevComVO"     type="egovframework.let.dev.service.DevComVO"/>
+
+	<select id="DevComDAO.selectDevCom" parameterClass="DevComVO" resultClass="DevComVO">
+		<![CDATA[
+			SELECT  NUM01
+			     ,  NUM02
+			     ,  NUM03
+			     ,  NUM04
+			     ,  NUM05
+			     ,  TXT01
+			     ,  TXT02
+			     ,  TXT03
+			     ,  TXT04
+			     ,  TXT05
+			  FROM  DEVTABLE
+			 WHERE	1 = 1
+			   AND  WKCD = #wkcd#
+		]]>
+	</select>
+	
+	<insert id="DevComDAO.insertExcelDevCom">
+		<![CDATA[
+			INSERT 
+			  INTO  DEVTABLE
+			     (  WKCD
+			     ,  NUM01         
+			     ,  NUM02          
+			     ,  NUM03   
+			     ,  NUM04   
+			     ,  NUM05      
+			     ,  TXT01  
+			     ,  TXT02
+			     ,  TXT03
+			     ,  TXT04
+			     ,  TXT05
+			     ) 
+			VALUES
+			     (  'A'
+			     ,  #num01#       
+			     ,  #num02#        
+			     ,  #num03#  
+			     ,  #num04#  
+			     ,  #num05#     
+			     ,  #txt01# 
+			     ,  #txt02#
+			     ,  #txt03#
+			     ,  #txt04#
+			     ,  #txt05#
+			     ) 
+		]]>
+	</insert>
+	
+	<insert id="DevComDAO.insertDevCom">
+		<![CDATA[
+			INSERT 
+			  INTO  DEVTABLE
+			     (  WKCD
+			     ,  NUM01         
+			     ,  NUM02          
+			     ,  NUM03   
+			     ,  NUM04   
+			     ,  NUM05      
+			     ,  TXT01  
+			     ,  TXT02
+			     ,  TXT03
+			     ,  TXT04
+			     ,  TXT05
+			     ) 
+			VALUES
+			     (  #wkcd#
+			     ,  #num01#       
+			     ,  #num02#        
+			     ,  #num03#  
+			     ,  #num04#  
+			     ,  #num05#     
+			     ,  #txt01# 
+			     ,  #txt02#
+			     ,  #txt03#
+			     ,  #txt04#
+			     ,  #txt05#
+			     ) 
+		]]>
+	</insert>
+
+	<delete id="DevComDAO.deleteDevCom">
+		<![CDATA[
+            DELETE  
+              FROM  DEVTABLE 
+             WHERE  WKCD = #wkcd#    
+		]]>
+	</delete>
+
+</sqlMap>            
