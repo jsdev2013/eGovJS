@@ -220,11 +220,10 @@
             <plugins>
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat8-maven-plugin</artifactId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                    	<url>http://104.197.148.106</url>
-                        <port>8080</port>
+                        <port>80</port>
                         <path>/</path>
                         <systemProperties>
                             <JAVA_OPTS>-Xms256m -Xmx768m -XX:MaxPermSize=256m</JAVA_OPTS>
