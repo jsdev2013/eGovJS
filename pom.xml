@@ -223,8 +223,10 @@
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <port>80</port>
-                        <path>/</path>
+                        <url>http://localhost:8080/manager/html</url>
+                        <path>/ebt_webapp</path>
+                        <username>jsdev2013</username>
+                        <password>Dlwltn03!!</password>
                         <systemProperties>
                             <JAVA_OPTS>-Xms256m -Xmx768m -XX:MaxPermSize=256m</JAVA_OPTS>
                         </systemProperties>
