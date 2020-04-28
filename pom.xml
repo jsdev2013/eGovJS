@@ -225,8 +225,6 @@
                     <configuration>
                         <url>http://localhost:8080/manager/html</url>
                         <path>/ebt_webapp</path>
-                        <username>jsdev2013</username>
-                        <password>Dlwltn03!!</password>
                         <systemProperties>
                             <JAVA_OPTS>-Xms256m -Xmx768m -XX:MaxPermSize=256m</JAVA_OPTS>
                         </systemProperties>
